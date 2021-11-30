@@ -91,4 +91,11 @@ public class UserService {
 		return users;
 
 	}
+
+	
+	@Async
+	public void test(String name) {
+		userRepository.findAll();
+		System.out.println(name+"  "+LocalDate.now());
+	}
 }

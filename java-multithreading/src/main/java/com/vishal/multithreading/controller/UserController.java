@@ -50,4 +50,13 @@ public class UserController {
 
 	}
 
+	@GetMapping("/testAsync")
+	public String testAsync() {
+		System.out.println("get method entered"+LocalDate.now());
+		userService.test("testing");
+		System.out.println("get method existed"+LocalDate.now());
+
+		return "testing";
+	}
+
 }
